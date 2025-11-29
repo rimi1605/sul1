@@ -6,7 +6,549 @@
   height: 40vmin;
   pointer-events: none;
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,ol,li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+img{
+  max-width: 100%;
+  vertical-align: top;
+}
+#header{
+  width: 100%;
+  height: 122px;
+  position: relative;
+  z-index: 10;
+}
+.up{
+  width: 1100px;
+  height: 78px;
+  margin: 0 auto;
+  position: relative;
+}
+.left{
+  width: 250px;
+  float: left;
+  position: relative;
+  font-size: 14px;
+}
+.language{
+  position: absolute;
+  width: 250px;
+  height: 35px;
+  line-height: 35px;
+  left: 0;
+  top: 10px;
+  z-index: 11;
+}
+.language>a{
+  position: absolute;
+  width: 250px;
+  height: 22px;
+  line-height: 22px;
+  left: 0;
+  top: 6px;
+  text-align: left;
+  padding-left: 30px;
+  color: #fff;
+}
+.language>a>span{
+  display: inline-block;
+  width: 14px;
+  height: 8px;
+  background: url(/public/images/h_0.png) no-repeat center;
+  margin-left: 15px;
+}
+.language>a>span>img{
+  display: none;
+}
+.language:hover span{
+  background: none;
+}
+.list{
+  position: absolute;
+  width: 250px;
+  background: #fff;
+  text-align: left;
+  /* padding: 10px; */
+  left: 0;
+  top: 50px;
+  z-index: 11;
+  
+}
+.list a{
+  display: block;
+  padding: 10px;
+  line-height: 15px;
+}
+.list li:hover a{
+  background: #ccc;
+}
+#logo{
+  width: 222px;
+  height: 42px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#logo a{
+  display: block;
+  height: 42px;
+  background: url(/public/images/logo_1.png) no-repeat;
+}
 
+.util{
+  float: right;
+}
+.util ul{
+  display: flex;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.util li{
+  padding: 0 10px;
+  border-right: 1px solid #ccc;
+}
+.util li a{
+  color: #fff;
+}
+.util li:last-child{
+  border-right: none;
+}
+.util li:last-child>a{
+  display: block;
+  width: 33px; height: 18px;
+  background: url(/public/images/ser_0.png) no-repeat center;
+}
+#header:hover{
+  background: #fff;
+}
+#header:hover .language>a>span>img{
+  display: block;
+}
+#header:hover #logo a{
+  background-image: url(/public/images/logo_0.png);
+}
+#header:hover a{
+  color: #666;
+}
+#header:hover .util li:last-child>a{
+  background-image: url(/public/images/ser_1.png);
+}
+.down{
+  width: 100%;
+  height: 44px;
+  position: relative;
+}
+#nav>ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+}
+#nav>ul>li{
+  padding: 0 20px;
+}
+#nav>ul>li>a{
+  display: block;
+  height: 44px;
+  line-height: 44px;
+  color: #fff;
+  position: relative;
+}
+#nav>ul>li>a:after{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  background: #333;
+  left: 0;
+  bottom: 0;
+  transition: all .5s;
+}
+#nav>ul>li>a:hover:after{
+  width: 100%;
+}
+#nav .subBack{
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  left: 0;
+  text-align: right;
+  padding: 10px 0;
+  border-top: 1px solid #aaa;
+  display: none;
+}
+#nav>ul>li:hover .subBack{
+  display: block;
+}
+#nav .subIn{
+  width: 1100px;
+  margin: 0 auto;
+}
+#nav .subIn>ul{
+  width: 630px;
+  float: right;
+  text-align: left;
+}
+#nav .subIn>ul>li{
+  display: inline-block;
+}
+#nav>ul>li:nth-child(5) .subIn>ul{
+  margin-right: -45px;
+}
+#nav>ul>li:nth-child(6) .subIn>ul{
+  margin-right: -50px;
+}
+#nav>ul>li:nth-child(7) .subIn>ul{
+  margin-right: -140px;
+}
+#nav>ul>li:nth-child(8) .subIn>ul{
+  margin-right: 180px;
+}
+#nav .subIn>ul>li>a{
+  display: block;
+  padding: 0 11px;
+  color: #999;
+}
+#nav .subIn>ul>li:hover>a{
+  color: #000;
+}
+#nav .subIn>ul>li:first-child>a{
+  padding-left: 0;
+}
+#nav .subIn>ul>li:last-child>a{
+  padding-right: 0;
+}
+.main{
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: -122px;
+  overflow: hidden;
+}
+
+
+.main .txtB{
+  position: absolute;
+  width: 1440px;
+  height: 80px;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: left;
+  color: #fff;
+}
+.main .txtB p:nth-child(1){
+  height: 27px;
+  font-size: 18px;
+}
+.main .txtB p:nth-child(2){
+  height: 53px;
+  font-size: 36px;
+}
+
+.section{
+  width: 1440px;
+  height: auto;
+  margin: 0 auto;
+}
+#section1{
+  height: 706px;
+  margin-top: -120px;
+}
+#section1 h2{
+  width: 1440px;
+  height: 62px;
+  font-size: 28px;
+  color: #000;
+  padding-bottom: 20px;
+  text-align: left;
+  font-weight: 700;
+}
+#section1 .boxWrap{
+  height: 670px;
+}
+#section1 .boxWrap .slide{
+  width: 1440px;
+  height: 600px;
+  padding: 20px 0;
+  /* overflow: hidden; */
+}
+#section1 .boxWrap .slide .imgBox{
+  width: 464px;
+  height: 464px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+#section1 .boxWrap .slide .imgBox img{
+ width: 464px;
+ height: 464px;
+ object-fit: cover;
+}
+#section1 .boxWrap .slide .txtBox{
+  width: 464px;
+  height: 94px;
+}
+#section1 .boxWrap .slide .txtBox p:nth-child(1){
+  height: 30px;
+  font-size: 20px;
+  font-weight: 700;
+}
+#section1 .boxWrap .slide .txtBox p:nth-child(2){
+  height: 40px;
+  font-size: 16px;
+  color: #888;
+}
+#section1 .boxWrap .slide .txtBox p:nth-child(3){
+  height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+}
+#section2{
+  height: 540px;
+  margin-top: 120px;
+  position: relative;
+}
+#section2 .txtBox{
+  position: absolute;
+  width: 226px; height: 174px;
+  z-index: 10;
+  left: 170px;
+  bottom: 80px;
+  text-align: left;
+}
+#section2 .txtBox h2{
+  font-size: 32px;
+  width: 226px;
+  height: 48px;
+}
+#section2 .txtBox p{
+  width: 226px; height: 61px; color: #666;
+  font-size: 18px; padding-top: 7px;
+  letter-spacing: -2px;
+  line-height: 26px;
+}
+#section2 .txtBox span{
+  display: block;
+  width: 114px;
+  height: 39px;
+  color: #222;
+  padding: 8px 23px;
+  border: 1px solid #222;
+  font-size: 14px;
+  letter-spacing: -2px;
+  margin-top: 26px;
+}
+#section3{
+  height: 651px;
+  margin-top: 120px;
+}
+#section3 h2{
+  width: 1440px;
+  height: 62px; 
+  font-size: 28px;
+  text-align: left;
+  padding-bottom: 20px;
+}
+#section3 .boxWrap{
+  height: 589px;
+}
+#section3 .box{
+  width: 1440px;
+  height: 522px;
+  overflow: hidden;
+}
+#section3 .box ul{
+  width: 1440px;
+  display: flex;
+  justify-content: space-between;
+}
+#section3 .box ul li:nth-child(1),
+#section3 .box ul li:nth-child(3){
+  width: 342px;
+  height: 522px;
+  position: relative;
+  background: #ededed;  
+}
+#section3 .box ul li:nth-child(2){
+  width: 708px;
+  height: 522px;
+  position: relative;
+}
+#section3 .box ul li:nth-child(1) .imgBox,
+#section3 .box ul li:nth-child(3) .imgBox{
+  width: 342px; height: 342px;
+  padding: 12px; position: absolute; left: 0; top: 0;
+}
+#section3 .box ul li:nth-child(2) .imgBox{
+  position: absolute;
+  width: 708px;
+  height: 522px;
+  left: 0; top: 0;
+}
+#section3 .box ul li:nth-child(2) .imgBox img{
+  height: 100%;
+}
+#section3 .box ul li:nth-child(1) .txtBox,
+#section3 .box ul li:nth-child(3) .txtBox{
+  position: absolute; width: 342px; height: 96px; left: 0; bottom: 50px;
+}
+#section3 .box ul li:nth-child(2) .txtBox{
+  position: absolute; width: 708px;
+  height: 118px; left: 0; bottom: 0;
+}
+#section3 .box ul li:nth-child(1) .txtBox p:nth-child(1),
+#section3 .box ul li:nth-child(3) .txtBox p:nth-child(1){
+  font-size: 20px; font-weight: 700; padding-bottom: 5px; width: 342px; height: 35px;
+}
+#section3 .box ul li:nth-child(1) .txtBox p:nth-child(2),
+#section3 .box ul li:nth-child(3) .txtBox p:nth-child(2){
+  font-size: 16px; padding-bottom: 15px;
+  color: #888;
+  width: 342px; height: 39px;
+}
+#section3 .box ul li:nth-child(1) .txtBox p:nth-child(3),
+#section3 .box ul li:nth-child(3) .txtBox p:nth-child(3){
+  width: 342px; height: 24px;
+  font-weight: 500; font-size: 16px;
+}
+#section3 .box ul li:nth-child(2) .txtBox p:nth-child(1){
+  width: 708px;
+  height: 39px;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0 0 5px 62px;
+  text-align: left;
+}
+#section3 .box ul li:nth-child(2) .txtBox p:nth-child(2){
+  width: 708px; height: 79px; padding: 7px 0 48px 62px;
+  color: #666; font-size: 16px; text-align: left;
+}
+#section4{
+  width: 1440px;
+  height: 718px;
+  margin-top: 120px;
+}
+#section4 ul{
+  display: flex;
+  justify-content: space-between;
+}
+#section4 ul li{
+  width: 707px;
+  height: 718px;
+  color: #222;
+}
+#section4 ul li .imgBox{
+  height: 599px;
+}
+#section4 ul li .txtBox{
+  height: 119px;
+}
+#section4 ul li .txtBox h3{
+  width: 707px;
+  height: 78px;
+  font-size: 28px;
+  padding: 22px 0 14px;
+}
+#section4 ul li .txtBox span{
+  display: inline-block;width: 134px;
+  height: 41px; font-size: 14px;
+  padding: 9px 33px;
+  border: 1px solid #222;
+  letter-spacing: -2px;
+}
+#footer{
+  height: 156px;
+  margin-top: 80px;
+  padding-bottom: 37px;
+  font-size: 12px;
+  color: #767676;
+  border-top: 1px solid #767676;
+}
+#footer .footIn{
+  width: 1200px;
+  padding: 0 50px;
+  height: 55px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer .fmenu{
+  width: 820px; height: 55px;
+}
+#footer .fmenu ul{
+  display: flex;
+  width: 820px; height: 55px;
+  align-items: center;
+}
+#footer .fmenu li a{
+  display: block;
+  padding: 3px 14px 3px 0;
+  border-right: 1px solid #767676;
+  margin-left: 14px;
+}
+#footer .fmenu li:first-child a{
+  margin-left: 0;
+}
+#footer .fmenu li:nth-child(3) a{
+  font-weight: 700;
+}
+#footer .fmenu li:last-child a{
+  border-right: none;
+}
+#footer .fmenu li a:hover{
+  text-decoration: underline;
+}
+.fsns{
+  width: 240px;
+  height: 55px;
+}
+.fsns ul{
+  width: 240px;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fsns li{
+  width: 30px;
+  height: 30px;
+}
+.fsns li:first-child{
+  width: 42px; height: 28px;
+}
+.fdown{
+  border-top: 1px solid #767676;
+  height: 63px;
+}
+.fdown .footIn{
+  display: block !important;
+  text-align: left;
+}
+.tel{
+  width: 820px;
+  height: 43px;
+  padding-top: 7px;
+  font-size: 15px;
+}
+.copy{
+  font-size: 13px;
+  height: 20px;
+}
+.copy span{
+  color: #444;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
